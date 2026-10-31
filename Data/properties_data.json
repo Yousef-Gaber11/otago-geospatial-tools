@@ -1,0 +1,468 @@
+[
+  {
+    "PropertyId": 3164993,
+    "Vnz": "28522/11900",
+    "Locality": "Alexandra",
+    "Road": "Centennial Avenue",
+    "HouseNumber": "64",
+    "LegalDescription": "SEC 2 BLK VI ALEXANDRA TN",
+    "Address": "64 Centennial Avenue, Alexandra",
+    "AreaSqm": 1012.5179415114625,
+    "PerimeterM": 140.8851297462163,
+    "EdgesCount": 8,
+    "CentroidWgs84": {
+      "X": 169.388416,
+      "Y": -45.25218
+    },
+    "CentroidNztm": {
+      "X": 1316604.79,
+      "Y": 4982687.33
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 50.320172414393106
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 20.11877223812135
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 22.49668439589267
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 0.18185623411283794
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 0.17879686750534818
+      },
+      {
+        "EdgeNumber": 6,
+        "LengthMeters": 5.539922282866225
+      },
+      {
+        "EdgeNumber": 7,
+        "LengthMeters": 21.92324044978119
+      },
+      {
+        "EdgeNumber": 8,
+        "LengthMeters": 20.12568486354358
+      }
+    ]
+  },
+  {
+    "PropertyId": 3138102,
+    "Vnz": "28522/11800B",
+    "Locality": "Alexandra",
+    "Road": "Centennial Ave",
+    "HouseNumber": "60",
+    "LegalDescription": "Unit B AUB1-AUB2 DP 18446 on Lot 1 DP 11604",
+    "Address": "",
+    "AreaSqm": 1020.32,
+    "PerimeterM": 171.39,
+    "EdgesCount": 4,
+    "CentroidWgs84": {
+      "X": 169.388533,
+      "Y": -45.252288
+    },
+    "CentroidNztm": {
+      "X": 1316614.5,
+      "Y": 4982675.77
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 14.29
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 71.4
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 14.29
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 71.4
+      }
+    ]
+  },
+  {
+    "PropertyId": 3106890,
+    "Vnz": "28522/12600C",
+    "Locality": "Alexandra",
+    "Road": "Ventry St",
+    "HouseNumber": "29",
+    "LegalDescription": "FLAT 3 ON SEC 19 PT 20 BLK VI ALEXANDRA TN",
+    "Address": "",
+    "AreaSqm": 2052.87,
+    "PerimeterM": 200.46,
+    "EdgesCount": 7,
+    "CentroidWgs84": {
+      "X": 169.388218,
+      "Y": -45.252743
+    },
+    "CentroidNztm": {
+      "X": 1316592.09,
+      "Y": 4982624.12
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 8.67
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 28.58
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 36.08
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 35.5
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 27.57
+      },
+      {
+        "EdgeNumber": 6,
+        "LengthMeters": 1.22
+      },
+      {
+        "EdgeNumber": 7,
+        "LengthMeters": 62.85
+      }
+    ]
+  },
+  {
+    "PropertyId": 3160714,
+    "Vnz": "28522/12200",
+    "Locality": "Alexandra",
+    "Road": "Brandon St",
+    "HouseNumber": "19",
+    "LegalDescription": "PT SECS 20 \u0026 22 BLK VI ALEXANDRA TN",
+    "Address": "",
+    "AreaSqm": 3340.22,
+    "PerimeterM": 297.02,
+    "EdgesCount": 8,
+    "CentroidWgs84": {
+      "X": 169.387982,
+      "Y": -45.252484
+    },
+    "CentroidNztm": {
+      "X": 1316572.26,
+      "Y": 4982652.06
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 28.39
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 62.85
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 28.41
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 35.71
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 22.54
+      },
+      {
+        "EdgeNumber": 6,
+        "LengthMeters": 34.62
+      },
+      {
+        "EdgeNumber": 7,
+        "LengthMeters": 27.17
+      },
+      {
+        "EdgeNumber": 8,
+        "LengthMeters": 57.34
+      }
+    ]
+  },
+  {
+    "PropertyId": 8610665,
+    "Vnz": "28522/11601",
+    "Locality": "Alexandra",
+    "Road": "Centennial Ave",
+    "HouseNumber": "52",
+    "LegalDescription": "Lot 1 DP 597852",
+    "Address": "",
+    "AreaSqm": 4513.29,
+    "PerimeterM": 270.45,
+    "EdgesCount": 18,
+    "CentroidWgs84": {
+      "X": 169.38882,
+      "Y": -45.252555
+    },
+    "CentroidNztm": {
+      "X": 1316638.38,
+      "Y": 4982647.03
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 71.4
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 28.61
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 18.29
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 8.53
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 1.76
+      },
+      {
+        "EdgeNumber": 6,
+        "LengthMeters": 6.52
+      },
+      {
+        "EdgeNumber": 7,
+        "LengthMeters": 6.6
+      },
+      {
+        "EdgeNumber": 8,
+        "LengthMeters": 28.4
+      },
+      {
+        "EdgeNumber": 9,
+        "LengthMeters": 3.55
+      },
+      {
+        "EdgeNumber": 10,
+        "LengthMeters": 7.1
+      },
+      {
+        "EdgeNumber": 11,
+        "LengthMeters": 7.91
+      },
+      {
+        "EdgeNumber": 12,
+        "LengthMeters": 4.26
+      },
+      {
+        "EdgeNumber": 13,
+        "LengthMeters": 4.59
+      },
+      {
+        "EdgeNumber": 14,
+        "LengthMeters": 4.26
+      },
+      {
+        "EdgeNumber": 15,
+        "LengthMeters": 4.83
+      },
+      {
+        "EdgeNumber": 16,
+        "LengthMeters": 6.67
+      },
+      {
+        "EdgeNumber": 17,
+        "LengthMeters": 28.61
+      },
+      {
+        "EdgeNumber": 18,
+        "LengthMeters": 28.58
+      }
+    ]
+  },
+  {
+    "PropertyId": 3075327,
+    "Vnz": "28522/12400",
+    "Locality": "Alexandra",
+    "Road": "Ventry St",
+    "HouseNumber": "31",
+    "LegalDescription": "LOT 2 DP 12121",
+    "Address": "",
+    "AreaSqm": 816.61,
+    "PerimeterM": 117.64,
+    "EdgesCount": 5,
+    "CentroidWgs84": {
+      "X": 169.387794,
+      "Y": -45.252539
+    },
+    "CentroidNztm": {
+      "X": 1316557.76,
+      "Y": 4982645.21
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 23.66
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 14.15
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 21.59
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 22.54
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 35.71
+      }
+    ]
+  },
+  {
+    "PropertyId": 3075872,
+    "Vnz": "28522/12300",
+    "Locality": "Alexandra",
+    "Road": "Brandon St",
+    "HouseNumber": "17",
+    "LegalDescription": "LOT 1 DP 12121 ALEXANDRA TN",
+    "Address": "",
+    "AreaSqm": 1224.78,
+    "PerimeterM": 139.58,
+    "EdgesCount": 5,
+    "CentroidWgs84": {
+      "X": 169.387639,
+      "Y": -45.252395
+    },
+    "CentroidNztm": {
+      "X": 1316544.93,
+      "Y": 4982660.71
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 33.51
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 35.72
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 34.62
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 21.59
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 14.15
+      }
+    ]
+  },
+  {
+    "PropertyId": 3121386,
+    "Vnz": "28522/12700",
+    "Locality": "Alexandra",
+    "Road": "Ventry St",
+    "HouseNumber": "27",
+    "LegalDescription": "LOT 2 DP 17072",
+    "Address": "",
+    "AreaSqm": 1215.5,
+    "PerimeterM": 200.03,
+    "EdgesCount": 8,
+    "CentroidWgs84": {
+      "X": 169.388472,
+      "Y": -45.252848
+    },
+    "CentroidNztm": {
+      "X": 1316612.51,
+      "Y": 4982613.32
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 36.08
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 28.61
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 71.58
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 5.95
+      },
+      {
+        "EdgeNumber": 5,
+        "LengthMeters": 21.55
+      },
+      {
+        "EdgeNumber": 6,
+        "LengthMeters": 11.14
+      },
+      {
+        "EdgeNumber": 7,
+        "LengthMeters": 4.03
+      },
+      {
+        "EdgeNumber": 8,
+        "LengthMeters": 21.1
+      }
+    ]
+  },
+  {
+    "PropertyId": 3093648,
+    "Vnz": "28522/11700",
+    "Locality": "Alexandra",
+    "Road": "Centennial Ave",
+    "HouseNumber": "56",
+    "LegalDescription": "LOT 2 DP 11604",
+    "Address": "",
+    "AreaSqm": 1020.33,
+    "PerimeterM": 171.39,
+    "EdgesCount": 4,
+    "CentroidWgs84": {
+      "X": 169.388611,
+      "Y": -45.252359
+    },
+    "CentroidNztm": {
+      "X": 1316620.97,
+      "Y": 4982668.07
+    },
+    "EdgesDetails": [
+      {
+        "EdgeNumber": 1,
+        "LengthMeters": 14.29
+      },
+      {
+        "EdgeNumber": 2,
+        "LengthMeters": 71.4
+      },
+      {
+        "EdgeNumber": 3,
+        "LengthMeters": 14.29
+      },
+      {
+        "EdgeNumber": 4,
+        "LengthMeters": 71.4
+      }
+    ]
+  }
+]

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otago Geospatial Tools</title>
+  <link rel="icon" href="data:," />
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+  <script src="https://unpkg.com/@mapbox/shp-write@latest/shpwrite.js"></script>
+
+  <script src="https://js.arcgis.com/4.28/"></script>
+</head>
+
+<body>
+  <div id="sidebar">
+    <h2>التقرير</h2>
+
+    <div class="tabs-header">
+      <button class="tab-btn active" data-tab="data">البحث</button>
+      <button class="tab-btn" data-tab="coords">الإحداثيات</button>
+      <button class="tab-btn" data-tab="edges">الأضلاع</button>
+      <button class="tab-btn" data-tab="draw">الرسم</button>
+    </div>
+
+    <div id="status" class="status"></div>
+
+    <div id="tab-data" class="tab-content active">
+      <div class="form-group">
+        <label>1. المنطقة / الحي:</label>
+        <select id="localitySelect" disabled>
+          <option value="">-- جاري التحميل --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>2. الشارع / الطريق:</label>
+        <select id="roadSelect" disabled>
+          <option value="">-- اختر المنطقة أولاً --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>3. العقارات وقطع الارض:</label>
+        <select id="propertySelect" disabled>
+          <option value="">-- اختر الشارع أولاً --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>4. العنوان:</label>
+        <select id="addressSelect" disabled>
+          <option value="">-- اختر العقار أولاً --</option>
+        </select>
+      </div>
+      <button id="saveBtn" class="action-btn" disabled type="button">
+        حفظ المعلومات
+      </button>
+    </div>
+
+    <div id="tab-coords" class="tab-content">
+      <p class="placeholder-text">اختر قطعة أرض لعرض الاحداثيات .</p>
+    </div>
+
+    <div id="tab-edges" class="tab-content">
+      <p class="placeholder-text">اختر قطعة أرض لحساب طول كل ضلع.</p>
+    </div>
+    <div id="tab-draw" class="tab-content">
+      <div class="form-group">
+        <label>طريقة الرسم:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="drawMethod" value="manual" checked />
+            إدخال يدوي</label>
+          <label><input type="radio" name="drawMethod" value="mouse" />
+            بالماوس</label>
+          <label><input type="radio" name="drawMethod" value="shapefile" /> رفع
+            ملف</label>
+        </div>
+      </div>
+
+      <div class="form-group" id="coordSysGroup">
+        <label>نظام الإحداثيات:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="coordSys" value="nztm" checked /> متري
+            (NZTM)</label>
+          <label><input type="radio" name="coordSys" value="wgs84" /> درجات
+            (WGS84)</label>
+        </div>
+      </div>
+
+      <div id="manualInputUI" class="manual-input-ui" style="display: block">
+        <div class="form-group manual-inputs-row">
+          <div class="input-col">
+            <label id="lblX" class="small-label">X (Easting):</label>
+            <input type="number" id="inputX" step="any" class="manual-input" placeholder="مثال: 1405000" />
+          </div>
+          <div class="input-col">
+            <label id="lblY" class="small-label">Y (Northing):</label>
+            <input type="number" id="inputY" step="any" class="manual-input" placeholder="مثال: 4916000" />
+          </div>
+          <button id="addPointBtn" type="button" class="add-point-btn">
+            إضافة
+          </button>
+        </div>
+
+        <div id="pointsList" class="points-list">
+          <span class="empty-msg">لا توجد نقاط.</span>
+        </div>
+
+        <div class="action-buttons-row">
+          <button id="drawManualBtn" type="button" class="action-btn draw-btn" disabled>
+            رسم الشكل
+          </button>
+          <button id="clearManualBtn" type="button" class="action-btn clear-btn">
+            مسح
+          </button>
+        </div>
+      </div>
+
+      <div id="mouseDrawUI" class="mouse-draw-ui" style="display: none">
+        <div class="form-group" style="margin-bottom: 10px">
+          <label>شكل الرسم:</label>
+          <select id="mouseDrawShape" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc">
+            <option value="polygon" selected>مضلع (Polygon)</option>
+            <option value="polyline">خط (Polyline)</option>
+            <option value="point">نقطة (Point)</option>
+          </select>
+        </div>
+        <p class="hint center-hint">
+          اضغط "بدء الرسم" ثم انقر على الخريطة لإضافة نقاط
+        </p>
+        <div class="action-buttons-row">
+          <button id="startMouseDrawBtn" type="button" class="action-btn start-draw-btn">
+            بدء الرسم
+          </button>
+          <button id="clearMouseDrawBtn" type="button" class="action-btn clear-btn">
+            مسح
+          </button>
+        </div>
+      </div>
+
+      <div id="shapefileUI" class="manual-input-ui" style="display: none">
+        <div class="form-group">
+          <label style="color: #2980b9; font-weight: bold">اختر ملف Shapefile (.zip):</label>
+          <input type="file" id="shpFileInput" accept=".zip" style="
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                background: white;
+              " />
+        </div>
+        <p class="hint" style="margin-top: 5px">
+          يجب أن يحتوي الملف المضغوط على (.shp, .dbf, .prj)
+        </p>
+        <div class="action-buttons-row">
+          <button id="clearShapefileBtn" type="button" class="action-btn clear-btn" style="width: 100%">
+            مسح الرسم
+          </button>
+        </div>
+      </div>
+
+      <div id="drawResults" class="draw-results-container"></div>
+
+      <button id="saveDrawnPropertiesBtn" class="action-btn draw-save-btn" disabled style="display: none">
+        حفظ العقارات المتقاطعة
+      </button>
+      <button id="exportShapefileBtn" class="action-btn" style="
+            display: none;
+            background-color: #47ad44;
+            width: 100%;
+            margin-top: 10px;
+          ">
+        تصدير الرسم كـ Shapefile
+      </button>
+
+    </div>
+
+  </div>
+
+  <div id="viewDiv">
+
+  </div>
+
+  <script src="main.js">     </script>
+</body>
+</html>
